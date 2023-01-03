@@ -10,7 +10,6 @@ const CartEmpty = () => {
   const navigator = useNavigate();
   const cartToggleHandler = () => {
     dispatch(setCartClose());
-
     navigator("/");
   };
   return (
