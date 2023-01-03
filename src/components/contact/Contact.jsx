@@ -6,18 +6,18 @@ import MyForm from "./Form";
 
 const contactInfo = [
   {
-    icon: <i className="fa-solid fa-map-location-dot"></i>,
+    icon: <i className="fa-solid fa-map-location-dot" />,
     title: "Our Address",
     address: " Egypt Tahrir Square 234 ",
   },
   {
-    icon: <i className="fa-solid fa-phone-flip"></i>,
+    icon: <i className="fa-solid fa-phone-flip" />,
     title: "Call Us ",
     link: "123-456-7890",
     toLink: "tel:123-456-7890",
   },
   {
-    icon: <i className="fa-solid fa-envelope"></i>,
+    icon: <i className="fa-solid fa-envelope" />,
     title: "Email Us ",
     toLink: "mailto:wStore@gmail.com",
     link: "savoy@gmail.com",

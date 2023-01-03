@@ -21,7 +21,9 @@ const App = () => {
       }
       <Routes >
 
-        <Route index element={<Home toggleNav={setShowNav} />} />
+        <Route path='/' element={<Home toggleNav={setShowNav} />} />
+        <Route path='/iti_task' element={<Home toggleNav={setShowNav} />} />
+
         <Route path='/productdetail/:id' element={<ProductDetails />} />
         <Route path='/contact' element={<Contact />} />
         <Route path="*" element={<NotFound toggleNav={setShowNav} />} />

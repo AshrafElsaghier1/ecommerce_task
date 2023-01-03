@@ -24,9 +24,9 @@ const Footer = () => {
                   ? `${styles.active} ${styles.navlink} nav-link  fs-6 fw-bold `
                   : ` nav-link  fs-6 fw-bold  ${styles.navlink}`
               }
-              to="/about"
+              to="/asd"
             >
-              About
+              Error page
             </NavLink>
             <NavLink
               className={({ isActive }) =>
