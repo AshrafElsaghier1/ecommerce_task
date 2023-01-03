@@ -1,0 +1,28 @@
+.navbar {
+  background-color: #fff6ea;
+  transition: 0.5s ease-in-out;
+}
+.navbar.active {
+  box-shadow: 4.2px 8.3px 8.3px #0000005e;
+}
+.navlink {
+  color: #777;
+  font-weight: bold !important;
+  max-width: max-content;
+}
+.navlink button {
+  color: #333;
+}
+
+.navlink button span {
+  top: -4px;
+  right: -2px;
+  background-color: #191e32;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-size: 1em;
+}
+.menubar {
+  box-shadow: none !important;
+}

@@ -1,0 +1,21 @@
+.cartImg {
+  width: 55px;
+}
+
+.cartItem {
+  padding-bottom: 15px;
+}
+.cartItem:not(:last-of-type) {
+  border-bottom: 1px solid #a7a5a55e;
+}
+
+.itemPrice {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.times {
+  width: 25px;
+  height: 25px;
+}
+.imgContainer {
+  width: 55px;
+}

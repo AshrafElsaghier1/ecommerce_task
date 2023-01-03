@@ -1,0 +1,131 @@
+.form-section {
+  padding: 30px 0 60px;
+  background-color: #e7dcc6;
+}
+
+.form-section .title {
+  color: #191e32;
+  text-transform: capitalize;
+}
+
+.form-inner {
+  max-width: 450px;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #e7dcc6;
+  box-shadow: 9px 9px 20px #010c1828;
+  padding: 30px 40px;
+  color: #191e32;
+}
+
+.logo-img {
+  width: 140px;
+}
+.form-groups-container button,
+.form-groups-container input,
+label,
+textarea {
+  width: 100%;
+  display: block;
+  border: 0;
+  outline: 0;
+}
+
+.form-groups-container input,
+.form-groups-container textarea {
+  background-color: #e7dcc6 !important;
+  font-size: 1rem;
+  height: 50px;
+  padding: 4px 18px 0;
+  box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #837f7f70 !important;
+  color: #191e32;
+  border-radius: 50px;
+}
+
+.form-groups-container textarea {
+  resize: none;
+  height: 100px;
+  border-radius: 15px;
+  padding-top: 15px;
+}
+
+.form-groups-container input::-webkit-input-placeholder,
+.form-groups-container textarea::-webkit-input-placeholder {
+  color: #191e32;
+  font-size: 0.8rem;
+  letter-spacing: 1.3px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-groups-container input::-moz-placeholder,
+.form-groups-container textarea::-moz-placeholder {
+  color: #191e32;
+  font-size: 0.8rem;
+  letter-spacing: 1.3px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-groups-container input:-ms-input-placeholder,
+.form-groups-container textarea:-ms-input-placeholder {
+  color: #191e32;
+  font-size: 0.8rem;
+  letter-spacing: 1.3px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-groups-container input::-ms-input-placeholder,
+.form-groups-container textarea::-ms-input-placeholder {
+  color: #191e32;
+  font-size: 0.8rem;
+  letter-spacing: 1.3px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-groups-container input::placeholder,
+.form-groups-container textarea::placeholder {
+  color: #191e32;
+  font-size: 0.8rem;
+  letter-spacing: 1.3px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-groups-container input.error,
+.form-groups-container textarea.error {
+  border: 1px solid salmon;
+}
+
+.form-groups-container .submit-btn-container .submit-btn {
+  color: #191e32;
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  background-color: #e7dcc6;
+  box-shadow: 4px 4px 4px #cbced1, -4px -4px 4px #837f7f70;
+  transition: 0.5s;
+  letter-spacing: 1.4px;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-groups-container .submit-btn-container .submit-btn:hover {
+  box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff;
+}
+
+.error-msg {
+  margin: 10px 0 0;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+  font-size: 12px;
+  text-transform: capitalize;
+  opacity: 1;
+}

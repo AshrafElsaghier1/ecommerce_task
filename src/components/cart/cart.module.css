@@ -1,0 +1,80 @@
+.cartOverlay {
+  z-index: 9992;
+  background-color: #e7dcc66c;
+  inset: 0;
+  transition: 0.3s ease-in-out;
+}
+.showCart {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+.hideCart {
+  visibility: hidden;
+  opacity: 0;
+}
+.showCart .cart {
+  transform: translateX(0);
+  z-index: 9999999999999999999;
+}
+.hideCart .cart {
+  transform: translateX(100%);
+}
+.cart {
+  max-width: 450px;
+  right: 0;
+  height: 100%;
+  background-color: #333333;
+  transition: 0.3s ease-in-out;
+  z-index: 99092;
+}
+.cartCount {
+  border-bottom: 1px solid #cccccc7d;
+}
+.close {
+  letter-spacing: 1.2px;
+  transition: 0.5s ease-in-out;
+}
+.close:hover {
+  color: #ffc107 !important;
+}
+.cartEmpty {
+  width: 90%;
+}
+
+.closeHandler {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+}
+.cartItemsContainer {
+  max-height: 410px;
+  padding: 10px;
+  overflow-y: scroll;
+  min-height: calc(100vh - 250px);
+  max-height: calc(100vh - 250px);
+}
+.cartItemsContainer::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+.cartItemsContainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 16px #333;
+}
+
+.cartItemsContainer::-webkit-scrollbar-thumb {
+  background-color: #191e32;
+}
+.subtotal {
+  letter-spacing: 1.7px;
+}
+.customButton {
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+  background-color: #fcc246d5 !important;
+  box-shadow: 10px 11px 7px 2px #07070775;
+}
+.customButton:hover {
+  background-color: #e9aa23 !important;
+  box-shadow: none;
+}

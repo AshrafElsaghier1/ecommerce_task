@@ -1,0 +1,31 @@
+.carousel .img {
+  height: calc(100vh - 56px) !important;
+  filter: brightness(0.4);
+  object-fit: cover;
+}
+.carousel button {
+  border-radius: 50% !important;
+  background-color: #fff9b0 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+.carousel .content {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel h2 {
+  color: #fff9b0;
+}
+.carousel .text {
+  letter-spacing: 1px;
+  color: #fff9b0;
+}
+.carousel p {
+  max-width: 65%;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel p {
+    max-width: 100%;
+  }
+}

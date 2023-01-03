@@ -1,0 +1,37 @@
+.productsContainer {
+  background-color: #e7dcc6;
+}
+
+.btnActive {
+  position: relative;
+  color: #191e32 !important;
+}
+
+.btnActive::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0;
+  height: 2px;
+  background-color: #191e32;
+}
+
+@media (max-width: 500px) {
+  .btnFilter {
+    font-size: 11px !important;
+  }
+}
+.filterSelected {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border: 1px solid #191e32 !important;
+}
+
+.filterOption {
+  background-color: #e7dcc6 !important;
+}
+.filterOption:checked {
+  background-color: #191e32 !important;
+  color: #fff;
+}

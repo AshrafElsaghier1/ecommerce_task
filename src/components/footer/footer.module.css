@@ -1,0 +1,16 @@
+@media screen and (max-width: 767px) {
+  .navbar {
+    flex-direction: column !important;
+  }
+}
+.navlink {
+  color: #a1a1a1 !important;
+  transition: 0.5s ease-in-out !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+.active {
+  color: #fff !important;
+}
+.navlink:hover {
+  color: #fff !important;
+}
