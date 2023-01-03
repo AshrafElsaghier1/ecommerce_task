@@ -19,11 +19,11 @@ const App = () => {
       {showNav &&
         <MyNav />
       }
-      <Routes path="/">
+      <Routes >
 
         <Route index element={<Home toggleNav={setShowNav} />} />
-        <Route path='productdetail/:id' element={<ProductDetails />} />
-        <Route path='contact' element={<Contact />} />
+        <Route path='/productdetail/:id' element={<ProductDetails />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path="*" element={<NotFound toggleNav={setShowNav} />} />
       </Routes>
       {showNav &&
