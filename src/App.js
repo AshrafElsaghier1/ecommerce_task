@@ -19,7 +19,7 @@ const App = () => {
       {showNav &&
         <MyNav />
       }
-      <Routes >
+      <Routes path="/">
 
         <Route index element={<Home toggleNav={setShowNav} />} />
         <Route path='productdetail/:id' element={<ProductDetails />} />
@@ -30,7 +30,7 @@ const App = () => {
         <Footer />
       }
 
-      <ToastContainer position="bottom-right"
+      <ToastContainer position="top-right"
         autoClose={1000}
       />
     </>
