@@ -9,6 +9,7 @@ import { setCartOpen } from "../../features";
 import { setGetTotals } from "../../features/cart-slice/cartSlice";
 import Cart from "../cart/Cart";
 import styles from "./navbar.module.css";
+import logo from "../../assets/imgs/logo.png";
 const MyNav = () => {
   const [active, setActive] = useState(false);
   const dispatch = useDispatch();
@@ -44,12 +45,7 @@ const MyNav = () => {
     >
       <Container>
         <NavLink to="/">
-          <img
-            src="/assets/imgs/logo.png"
-            alt="logo"
-            width="120"
-            draggable="false"
-          />
+          <img src={logo} alt="logo" width="120" draggable="false" />
         </NavLink>
         <Navbar.Toggle
           aria-controls={`offcanvasNavbar-expand-md`}

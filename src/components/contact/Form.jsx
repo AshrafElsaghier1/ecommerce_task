@@ -4,6 +4,8 @@ import Form from "react-bootstrap/Form";
 import { toast } from "react-toastify";
 
 import "./form.css";
+import logo from "../../assets/imgs/logo.png";
+
 const MyForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -103,7 +105,7 @@ const MyForm = () => {
         >
           <div className="logo-container">
             <img
-              src="/assets/imgs/logo.png"
+              src={logo}
               alt="logo"
               draggable="false"
               className="logo-img d-block mx-auto mb-4"
