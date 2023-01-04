@@ -22,7 +22,7 @@ const App = () => {
       <Routes >
 
         <Route path='/' element={<Home toggleNav={setShowNav} />} />
-        <Route path='/iti_task' element={<Home toggleNav={setShowNav} />} />
+        <Route path='iti_task' element={<Home toggleNav={setShowNav} />} />
 
         <Route path='/productdetail/:id' element={<ProductDetails />} />
         <Route path='/contact' element={<Contact />} />

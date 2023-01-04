@@ -6,9 +6,9 @@ const ImgCard = ({ data, showCategoryTitle }) => {
   let titleBg =
     category === "BEST SELLER"
       ? styles.bestBg
-      : category === "Final Stock"
+      : category === "Low Stock"
       ? styles.finalBg
-      : category === "New"
+      : category === "New Arrival"
       ? styles.newBg
       : category === "Anlog"
       ? styles.anlogBg

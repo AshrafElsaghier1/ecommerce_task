@@ -12,6 +12,10 @@ import styles from "./navbar.module.css";
 import logo from "../../assets/imgs/logo.png";
 const MyNav = () => {
   const [active, setActive] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const dispatch = useDispatch();
   useEffect(() => {
     const handleScroll = () => {
@@ -48,23 +52,14 @@ const MyNav = () => {
           <img src={logo} alt="logo" width="120" draggable="false" />
         </NavLink>
         <Navbar.Toggle
-          aria-controls={`offcanvasNavbar-expand-md`}
           className={`${styles.menubar} border-0 p-0`}
+          onClick={handleShow}
         />
-        <Navbar.Offcanvas
-          id={`offcanvasNavbar-expand-md`}
-          aria-labelledby={`offcanvasNavbarLabel-expand-md`}
-          placement="end"
-        >
+        <Navbar.Offcanvas placement="end" show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
               <NavLink to="/">
-                <img
-                  src="/assets/imgs/logo.png"
-                  alt="logo"
-                  width="120"
-                  draggable="false"
-                />
+                <img src={logo} alt="logo" width="120" draggable="false" />
               </NavLink>
             </Offcanvas.Title>
           </Offcanvas.Header>

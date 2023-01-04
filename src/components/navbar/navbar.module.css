@@ -26,3 +26,9 @@
 .menubar {
   box-shadow: none !important;
 }
+@media screen and (max-width: 768px) {
+  .navlink button span {
+    top: -6px;
+    right: -9px;
+  }
+}

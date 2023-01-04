@@ -78,7 +78,7 @@ const Products = () => {
                 ))}
               </Form.Select>
             </div>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4  my-5">
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4  my-3 my-md-5">
               {filteredProducts.length === 0
                 ? productsRendering(products)
                 : productsRendering(filteredProducts)}
