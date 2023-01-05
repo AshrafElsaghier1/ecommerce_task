@@ -1,10 +1,11 @@
 import { Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { categoryFilter, setActive } from "../../features";
-import styles from "../products/products.module.css";
+import { categoryFilter, searchFilter, setActive } from "../../features";
+import styles from "./filter.module.css";
 
 const Filter = ({ products }) => {
   const { active } = useSelector((state) => state.activeCategory);
+  let { filteredProductsByCategory } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
   const categoriesFilter = [
@@ -20,8 +21,27 @@ const Filter = ({ products }) => {
   const changeTitleCategoryHandler = (e) => {
     dispatch(categoryFilter(e.target.value));
   };
+
+  const searchHandler = (e) => {
+    const arr = filteredProductsByCategory.filter((item) =>
+      item.title.toLowerCase().includes(e.target.value)
+    );
+    console.log({ arr });
+  };
+
   return (
     <>
+      <div className="mb-2  d-flex justify-content-between align-items-center py-2">
+        <>
+          <Form.Control
+            type="text"
+            placeholder="SEARCH..."
+            className={`${styles.inputField}`}
+            onChange={searchHandler}
+          />
+        </>
+      </div>
+
       <div className=" d-none d-md-flex  gap-2 justify-content-center">
         {categoriesFilter.map((category, index) => (
           <button

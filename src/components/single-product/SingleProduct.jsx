@@ -16,9 +16,8 @@ const SingleProduct = ({ data }) => {
   };
   const navigator = useNavigate();
 
-  const submitHandler = (cartItem, id) => {
+  const submitHandler = (id) => {
     navigator(`/productdetail/${id}`);
-    // addItemToCart(cartItem);
   };
 
   return (
@@ -31,7 +30,7 @@ const SingleProduct = ({ data }) => {
         </NavLink>
         <Card.Body>
           <h2
-            className={`${styles.productLink} fw-semibold text-black fs-6  d-block mb-2`}
+            className={`${styles.productLink} fw-semibold text-black  d-block mb-2`}
           >
             {title}
           </h2>

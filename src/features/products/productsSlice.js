@@ -4,15 +4,12 @@ import { fetchProduct, fetchProducts } from './productsApi';
 
 const initialState = {
   products: [],
-  filteredProducts: [],
+  filteredProductsByCategory: [],
+  filteredProductsBySearch: [],
   product: {},
   isLoading: false,
   isError: false
 };
-
-
-// action 
-
 
 export const getProducts = createAsyncThunk("products/getProducts", async (args, thunkAPI) => {
   const { rejectWithValue } = thunkAPI
@@ -31,7 +28,6 @@ export const getProduct = createAsyncThunk("products/getProduct", async (id, thu
     const response = await fetchProduct(id)
     return response.data
   } catch (error) {
-    console.log({ rejectWithValue });
     return rejectWithValue(error.message)
   }
 })
@@ -45,27 +41,30 @@ const productsSlice = createSlice({
       if (action.payload === "All") {
         return {
           ...state,
-          filteredProducts: []
+          filteredProductsByCategory: []
         };
 
       }
-
       return {
         ...state,
-        filteredProducts: state.products.filter(product => product.category === action.payload)
+        filteredProductsByCategory: state.products.filter(product => product.category === action.payload)
       };
 
+    },
+    searchFilter: (state, action) => {
+      console.log(action.payload);
+      return {
+        ...state,
+        filteredProductsBySearch: state.filteredProductsByCategory?.filter(product => product.title.indexOf(action.payload) !== -1)
+      }
     }
   },
   extraReducers: (builder) => {
-
-
     builder.addCase(getProducts.pending, (state) => {
       state.isLoading = true;
       state.isError = false
     })
       .addCase(getProducts.fulfilled, (state, action) => {
-
         state.isLoading = false;
         state.products = action.payload
         state.isError = false
@@ -74,14 +73,11 @@ const productsSlice = createSlice({
         state.isLoading = false;
         state.isError = action.payload
       })
-
-
       .addCase(getProduct.pending, (state) => {
         state.isLoading = true;
         state.isError = false
       })
       .addCase(getProduct.fulfilled, (state, action) => {
-
         state.isLoading = false;
         state.product = action.payload
         state.isError = false
@@ -92,7 +88,5 @@ const productsSlice = createSlice({
       })
   }
 })
-
-
 export const productsReducer = productsSlice.reducer
-export const { categoryFilter } = productsSlice.actions
+export const { categoryFilter, searchFilter } = productsSlice.actions

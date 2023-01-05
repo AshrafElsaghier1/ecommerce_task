@@ -1,0 +1,53 @@
+.inputField:focus {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+.inputField {
+  max-width: 300px;
+  border: 1px solid #191e326c !important;
+  background-color: transparent !important;
+  outline: 0;
+  color: #191e32;
+}
+.inputField::placeholder {
+  color: #191e326b !important;
+  letter-spacing: 1.4px;
+}
+@media (max-width: 500px) {
+  .btnFilter {
+    font-size: 11px !important;
+  }
+}
+.filterSelected {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border: 1px solid #191e32 !important;
+}
+
+.filterOption {
+  background-color: #e7dcc6 !important;
+}
+.filterOption:checked {
+  background-color: #191e32 !important;
+  color: #fff;
+}
+.btnFilter {
+  position: relative;
+  color: #191e32 !important;
+}
+
+.btnFilter::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  transform: scale(0);
+  left: 0;
+  height: 2px;
+  background-color: #191e32;
+  transition: 0.4s ease-in-out;
+}
+.btnFilter:hover::after,
+.btnActive::after {
+  transform: scale(1);
+}
