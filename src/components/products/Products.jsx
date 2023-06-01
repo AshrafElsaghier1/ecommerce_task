@@ -22,7 +22,7 @@ const Products = () => {
   };
 
   return (
-    <section className={`${styles.productsContainer} py-5`}>
+    <section className={`${styles.productsContainer} py-5 .`}>
       <Container>
         {isLoading ? (
           <div className="position-relative">
