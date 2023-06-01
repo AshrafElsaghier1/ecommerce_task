@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = 'https://e-commerce-api-y4mu.onrender.com/data';
+const baseURL = 'https://iti-ecommerce-data.onrender.com/data';
 
 export const fetchProducts = () => {
 
