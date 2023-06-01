@@ -1,25 +1,18 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts, searchFilter } from "../../features";
+import { getProducts } from "../../features";
 import { Loading, SingleProduct } from "../";
 import styles from "./products.module.css";
 import { Container } from "react-bootstrap";
 import Filter from "../filter/Filter";
 
 const Products = () => {
-  let {
-    products,
-    isLoading,
-    filteredProductsByCategory,
-    isError,
-    filteredProductsBySearch,
-  } = useSelector((state) => state.products);
-  let [state, setState] = useState([]);
+  let { products, isLoading, filteredProductsByCategory, isError } =
+    useSelector((state) => state.products);
+
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getProducts()).then((res) => {
-      setState(res.payload);
-    });
+    dispatch(getProducts());
   }, [dispatch]);
 
   const productsRendering = (arr) => {
@@ -39,16 +32,12 @@ const Products = () => {
           <h2 className="alert alert-danger"> E R R O R .... </h2>
         ) : (
           <>
-            <Filter
-              products={products}
-              filteredProducts={filteredProductsByCategory}
-              setState={setState}
-            />
+            <Filter products={products} />
 
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4  my-3 my-md-4">
               {filteredProductsByCategory.length === 0
                 ? productsRendering(products)
-                : productsRendering(state)}
+                : productsRendering(filteredProductsByCategory)}
             </div>
           </>
         )}

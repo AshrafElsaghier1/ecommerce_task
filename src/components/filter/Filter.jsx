@@ -1,6 +1,6 @@
 import { Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { categoryFilter, searchFilter, setActive } from "../../features";
+import { categoryFilter, setActive } from "../../features";
 import styles from "./filter.module.css";
 
 const Filter = ({ products }) => {
@@ -31,17 +31,6 @@ const Filter = ({ products }) => {
 
   return (
     <>
-      <div className="mb-2  d-flex justify-content-between align-items-center py-2">
-        <>
-          <Form.Control
-            type="text"
-            placeholder="SEARCH..."
-            className={`${styles.inputField}`}
-            onChange={searchHandler}
-          />
-        </>
-      </div>
-
       <div className=" d-none d-md-flex  gap-2 justify-content-center">
         {categoriesFilter.map((category, index) => (
           <button
